@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const easterEggs = [
-  { icon: "/\\", label: "Space Invaders Shield", hint: "Tap 3x quickly" },
-  { icon: "()", label: "Pac-Dot Trail", hint: "Hover to reveal" },
-  { icon: "[]", label: "Tetris Ghost Block", hint: "Double click card" },
-  { icon: "++", label: "Contra Core", hint: "Try Konami code" }
+  // { icon: "/\\", label: "Space Invaders Shield", hint: "Tap 3x quickly" },
+  // { icon: "()", label: "Pac-Dot Trail", hint: "Hover to reveal" },
+  // { icon: "[]", label: "Tetris Ghost Block", hint: "Double click card" },
+  // { icon: "++", label: "Contra Core", hint: "Try Konami code" }
 ];
 
 export default function HomePage() {
@@ -64,6 +64,7 @@ export default function HomePage() {
         <Link className="cta" href="/games/flappy">
           Launch Flappy Bird
         </Link>
+        <a className="cta" href="/Space-Shooters/index.html">Launch Space Shooters</a>
       </header>
 
       <section className="easter-grid">
@@ -90,8 +91,9 @@ export default function HomePage() {
         <h2>Game Portal</h2>
         <div className="game-list">
           <Link href="/games/flappy" className="game-item active">
-            Flappy Bird
+            Flappy Bird By Prathmesh L
           </Link>
+          <a href="/Space-Shooters/index.html" className="game-item activate">Space Shooters By Shriyash K</a>
           <div className="game-item disabled">Snake (coming soon)</div>
           <div className="game-item disabled">Breakout (coming soon)</div>
         </div>

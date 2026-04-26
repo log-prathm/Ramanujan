@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌌 FULL SCREEN SPACE BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+
+  background: radial-gradient(circle at 20% 20%, #0a0a2a, #000000 70%);
+}
+
+/* ⭐ fake stars outside canvas */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 70% 60%, white, transparent),
+    radial-gradient(2px 2px at 40% 80%, white, transparent),
+    radial-gradient(1px 1px at 90% 20%, white, transparent);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* 🎮 CENTER GAME PERFECTLY */
+#game-wrapper {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 📱 default → mobile (top) */
+}
+@media (min-width: 768px) {
+  #game-wrapper {
+    align-items: center; /* 💻 center on PC */
+  }
+}
+
+/* 🟦 GAME BOX */
+#game-container {
+  width: 360px;
+  height: 640px;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  border: 2px solid #00ffff33;
+
+  box-shadow:
+    0 0 25px #00ffff44,
+    0 0 60px #000 inset;
+
+  background: black;
+}
