@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-header" aria-label="Game status">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <div>
+          <h1>Snake Game</h1>
+          <p>Eat energy orbs. Avoid walls and yourself.</p>
+        </div>
+      </div>
+
+      <div class="score-board">
+        <div>
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>High</span>
+          <strong id="highScore">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-layout">
+      <aside class="control-panel">
+        <div class="panel-block">
+          <span class="panel-label">Difficulty</span>
+          <div class="difficulty-group" role="group" aria-label="Difficulty selection">
+            <button class="difficulty-btn active" type="button" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" type="button" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" type="button" data-difficulty="hard">Hard</button>
+          </div>
+        </div>
+
+        <div class="panel-block">
+          <span class="panel-label">Controls</span>
+          <div class="action-grid">
+            <button id="startBtn" type="button">Start</button>
+            <button id="pauseBtn" type="button">Pause</button>
+            <button id="restartBtn" type="button">Restart</button>
+            <button id="musicBtn" type="button" aria-pressed="false">Music Off</button>
+          </div>
+        </div>
+
+        <div class="hint-list">
+          <span>Desktop: Arrow keys or WASD</span>
+          <span>Mobile: Swipe or use buttons</span>
+        </div>
+      </aside>
+
+      <section class="board-wrap">
+        <canvas id="gameCanvas" width="720" height="720" aria-label="Snake game board"></canvas>
+
+        <div id="startScreen" class="screen">
+          <h2>Ready?</h2>
+          <p>Choose difficulty, then start the snake chase.</p>
+          <button id="screenStartBtn" type="button">Start Game</button>
+        </div>
+
+        <div id="pauseScreen" class="screen hidden">
+          <h2>Paused</h2>
+          <p>Take a breath. The grid is waiting.</p>
+          <button id="resumeBtn" type="button">Resume</button>
+        </div>
+
+        <div id="gameOverScreen" class="screen hidden">
+          <h2>Game Over</h2>
+          <p id="finalScore">Your score is 0.</p>
+          <button id="playAgainBtn" type="button">Play Again</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="touch-pad" aria-label="Mobile movement controls">
+      <button id="upBtn" type="button" aria-label="Move up">Up</button>
+      <div class="touch-row">
+        <button id="leftBtn" type="button" aria-label="Move left">Left</button>
+        <button id="downBtn" type="button" aria-label="Move down">Down</button>
+        <button id="rightBtn" type="button" aria-label="Move right">Right</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

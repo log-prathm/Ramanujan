@@ -65,6 +65,8 @@ export default function HomePage() {
           Launch Flappy Bird
         </Link>
         <a className="cta" href="/Space-Shooters/index.html">Launch Space Shooters</a>
+        <a className="cta" href="/snake-game/index.html">Launch Snake Game</a>
+        <a className="cta" href="/catch-the-ball-game/index.html">Launch Catch the Ball</a>
       </header>
 
       <section className="easter-grid">
@@ -94,8 +96,8 @@ export default function HomePage() {
             Flappy Bird By Prathmesh L
           </Link>
           <a href="/Space-Shooters/index.html" className="game-item activate">Space Shooters By Shriyash K</a>
-          <div className="game-item disabled">Snake (coming soon)</div>
-          <div className="game-item disabled">Breakout (coming soon)</div>
+          <a href="/snake-game/index.html" className="game-item activate">Snake Game By Vaibhav A</a>
+          <a href="/catch-the-ball-game/index.html" className="game-item activate">Catch the Ball By Vaibhav A</a>
         </div>
       </section>
     </main>
