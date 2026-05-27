@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch The Ball</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="top-bar" aria-label="Game status">
+      <div>
+        <span class="label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div>
+        <span class="label">Missed</span>
+        <strong><span id="missed">0</span>/3</strong>
+      </div>
+      <div>
+        <span class="label">Best</span>
+        <strong id="bestScore">0</strong>
+      </div>
+    </section>
+
+    <section class="canvas-wrap">
+      <canvas id="gameCanvas" width="900" height="560" aria-label="Catch the falling balls game"></canvas>
+
+      <div id="overlay" class="overlay">
+        <h1>Catch The Ball</h1>
+        <p>Move the basket and catch falling balls. Miss 3 balls and the game ends.</p>
+        <button id="startBtn" type="button">Start Game</button>
+      </div>
+    </section>
+    <section class="controls" aria-label="Game controls">
+      <button id="leftBtn" type="button" aria-label="Move left">Left</button>
+      <button id="pauseBtn" type="button">Pause</button>
+      <button id="rightBtn" type="button" aria-label="Move right">Right</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
